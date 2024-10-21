@@ -9,8 +9,14 @@
 <body>
   <div class="container">
     <div class="panel-puntos">
-      <div id="puntos-equipo1">Puntos equipo 1: 0</div>
-      <div id="puntos-equipo2">Puntos equipo 2: 0</div>
+      <div>
+        <div id="puntos-equipo1">Puntos equipo 1: 0</div>
+        <div id="errores-equipo1">Errores equipo 1: </div>
+      </div>
+      <div>
+        <div id="puntos-equipo2">Puntos equipo 2: 0</div>
+        <div id="errores-equipo2">Errores equipo 2: </div>
+      </div>
     </div>
 
     <div class="panel-respuestas">
@@ -33,14 +39,19 @@
       <button onclick="mostrarRespuesta(2)">2</button>
       <button onclick="mostrarRespuesta(3)">3</button>
 
-      <button onclick="marcarError(1)">1x</button>
-      <button onclick="marcarError(2)">2x</button>
-      <button onclick="marcarError(3)">3x</button>
+      <button onclick="sumarPuntos(1)">E1+</button>
+      <button onclick="restarPuntos(1)">E1-</button>
+      <button onclick="sumarPuntos(2)">E2+</button>
+      <button onclick="restarPuntos(2)">E2-</button>
+    </div>
 
-      <button onclick="sumarPuntos(1)">E1</button>
-      <button onclick="restarPuntos(1)">-E1</button>
-      <button onclick="sumarPuntos(2)">E2</button>
-      <button onclick="restarPuntos(2)">-E2</button>
+    <div class="panel-errores">
+      <button onclick="marcarError(1, 1)">1XE1</button>
+      <button onclick="marcarError(2, 1)">2XE1</button>
+      <button onclick="marcarError(3, 1)">3XE1</button>
+      <button onclick="marcarError(1, 2)">1XE2</button>
+      <button onclick="marcarError(2, 2)">2XE2</button>
+      <button onclick="marcarError(3, 2)">3XE2</button>
     </div>
 
     <div class="rondas-control">
