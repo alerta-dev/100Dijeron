@@ -24,7 +24,7 @@ body {
   justify-content: space-between;
   margin-bottom: 30px;
   padding: 10px;
-  color: #f0e130; /* Amarillo brillante */
+  color: #ffffff /* Amarillo brillante */
 }
 
 .panel-puntos div {
@@ -45,7 +45,7 @@ body {
   background-color: #5100c1; /* Morado más profundo */
   border-radius: 15px;
   padding: 25px;
-  color: #f0e130; /* Amarillo brillante */
+  color: #ffffff /* Amarillo brillante */
   margin-bottom: 30px;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
 }
@@ -74,7 +74,7 @@ body {
 /* Botones */
 button {
   background-color: #ff1111; /* Morado principal */
-  color: #f0e130; /* Amarillo brillante */
+  color: #ffffff /* Amarillo brillante */
   border: none;
   padding: 12px 25px;
   margin: 5px;
@@ -122,7 +122,7 @@ button:active {
 }
 
 .rondas-control button {
-  background-color: #f0e130; /* Amarillo brillante */
+  background-color: #ffffff /* Amarillo brillante */
   color: #ff1111; /* Texto morado */
 }
 
