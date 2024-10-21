@@ -1,21 +1,21 @@
 /* Estilo general */
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
-  text-align: center;
+  background-color: #1f1f1f;
+  color: #ffffff;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 /* Contenedor principal */
 .container {
   max-width: 900px;
-  margin: 50px auto;
+  margin: 40px auto;
   padding: 20px;
-  background-color: #ffffff;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
+  background-color: #292929;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
 }
 
 /* Panel de puntos */
@@ -24,34 +24,34 @@ body {
   justify-content: space-between;
   margin-bottom: 30px;
   padding: 10px;
+  color: #f0e130; /* Amarillo brillante */
 }
 
 .panel-puntos div {
-  background-color: #f8f9fa;
-  border-radius: 10px;
-  padding: 15px;
+  background-color: #6a1b9a; /* Morado oscuro */
+  border-radius: 15px;
+  padding: 20px;
   width: 45%;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .panel-puntos div div {
-  font-size: 18px;
-  color: #555;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 /* Panel de respuestas */
 .panel-respuestas {
-  background-color: #343a40;
-  border-radius: 10px;
-  padding: 20px;
-  color: white;
-  margin-bottom: 20px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #4a148c; /* Morado más profundo */
+  border-radius: 15px;
+  padding: 25px;
+  color: #f0e130; /* Amarillo brillante */
+  margin-bottom: 30px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 .respuesta {
-  font-size: 22px;
+  font-size: 28px;
   margin: 15px 0;
   display: flex;
   justify-content: space-between;
@@ -59,32 +59,40 @@ body {
 
 .respuesta span {
   font-weight: bold;
+  color: #fff;
 }
 
-/* Panel de control y rondas */
-.panel-control, .panel-errores, .rondas-control {
-  margin-top: 20px;
+/* Panel de control */
+.panel-control {
+  background-color: #333333;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
 }
 
+/* Botones */
 button {
-  background-color: #007bff;
-  color: white;
+  background-color: #6a1b9a; /* Morado principal */
+  color: #f0e130; /* Amarillo brillante */
   border: none;
-  padding: 10px 20px;
+  padding: 12px 25px;
   margin: 5px;
-  border-radius: 8px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #8e24aa; /* Morado claro al hacer hover */
+  transform: scale(1.05); /* Efecto de zoom */
 }
 
-button:focus {
-  outline: none;
-  box-shadow: 0 0 8px rgba(0, 123, 255, 0.7);
+button:active {
+  transform: scale(0.98);
 }
 
 /* Estilo para la sección de errores */
@@ -92,23 +100,47 @@ button:focus {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 15px;
+  margin-top: 20px;
 }
 
-button:active {
-  transform: scale(0.98);
+.x-button {
+  background-color: #e53935; /* Rojo para errores */
+  color: white;
+  padding: 12px 25px;
+  border-radius: 12px;
+  font-weight: bold;
 }
 
-/* Rondas control */
+.x-button:hover {
+  background-color: #d32f2f;
+}
+
+/* Rondas */
 .rondas-control {
-  margin-top: 25px;
+  margin-top: 20px;
 }
 
 .rondas-control button {
-  background-color: #28a745;
-  color: white;
+  background-color: #f0e130; /* Amarillo brillante */
+  color: #6a1b9a; /* Texto morado */
 }
 
 .rondas-control button:hover {
-  background-color: #218838;
+  background-color: #ffea4d; /* Amarillo claro */
 }
+
+/* Panel de errores debajo de los puntajes */
+.errores-equipos {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.errores-equipos div {
+  width: 45%;
+  text-align: center;
+  font-size: 20px;
+  color: #e53935; /* Rojo para errores */
+}
+
