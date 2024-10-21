@@ -1,9 +1,10 @@
 let rondaActual = 0;
 let puntosEquipo1 = 0;
 let puntosEquipo2 = 0;
-let erroresEquipo1 = 0;
-let erroresEquipo2 = 0;
+let erroresEquipo1 = "";
+let erroresEquipo2 = "";
 
+// Preguntas por rondas
 const preguntasRondas = [
   [
     { respuesta: "Respuesta 1 Ronda 1", puntos: 30 },
@@ -45,11 +46,15 @@ function mostrarRespuesta(num) {
   document.getElementById(`puntos${num}`).textContent = respuesta.puntos;
 }
 
-// Marcar un error
-function marcarError(numErrores) {
-  if (numErrores === 1) erroresEquipo1++;
-  if (numErrores === 2) erroresEquipo2++;
-  if (numErrores === 3) console.log("Error máximo");
+// Marcar un error para el equipo (y mostrar X debajo de los puntos)
+function marcarError(numErrores, equipo) {
+  if (equipo === 1) {
+    erroresEquipo1 += "X ";
+    document.getElementById("errores-equipo1").textContent = `Errores equipo 1: ${erroresEquipo1}`;
+  } else {
+    erroresEquipo2 += "X ";
+    document.getElementById("errores-equipo2").textContent = `Errores equipo 2: ${erroresEquipo2}`;
+  }
 }
 
 // Sumar puntos a un equipo
@@ -80,6 +85,10 @@ function resetearPanel() {
     document.getElementById(`respuesta${i}`).textContent = `${i}.............`;
     document.getElementById(`puntos${i}`).textContent = '';
   }
+  erroresEquipo1 = "";
+  erroresEquipo2 = "";
+  document.getElementById("errores-equipo1").textContent = "Errores equipo 1: ";
+  document.getElementById("errores-equipo2").textContent = "Errores equipo 2: ";
 }
 
 // Iniciar con la primera ronda (y esconder las respuestas)
