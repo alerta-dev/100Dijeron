@@ -1,57 +1,58 @@
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #f3ec78, #af4261);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.game-container {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #121212;
+    color: white;
     text-align: center;
 }
 
-.answers .answer {
-    display: flex;
-    justify-content: space-between;
-    margin: 10px 0;
-    font-size: 18px;
+.game-board {
+    margin-top: 50px;
 }
 
-.controls {
-    margin-top: 20px;
-}
-
-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #6200ea;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    margin: 5px;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #3700b3;
-}
-
-.teams {
+.scoreboard {
     display: flex;
     justify-content: space-around;
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.team {
-    background-color: #f3f3f3;
-    padding: 10px;
+.team-score h2 {
+    margin: 0;
+}
+
+.answers-board {
+    background-color: #6200ea;
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+.answer {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.control-panel {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.control-button {
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 50px;
+    font-size: 18px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.purple { background-color: #6A1B9A; }
+.red { background-color: #D32F2F; }
+.yellow { background-color: #FBC02D; }
+
+.errors {
+    margin-top: 10px;
+    font-size: 24px;
+    color: red;
 }
