@@ -7,31 +7,49 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="game-container">
-        <h1>100 Mexicanos Dijeron</h1>
-        <div class="question">¿Cuál es la comida más popular en México?</div>
-        <div class="answers">
-            <div class="answer">1. <span class="text"></span> <span class="points"></span></div>
-            <div class="answer">2. <span class="text"></span> <span class="points"></span></div>
-            <div class="answer">3. <span class="text"></span> <span class="points"></span></div>
-        </div>
-        <div class="controls">
-            <button onclick="showAnswer(1, 'Tacos', 40)">Mostrar respuesta 1</button>
-            <button onclick="addError()">Error</button>
-        </div>
-        <div class="teams">
-            <div class="team">
-                <h2>Equipo 1</h2>
-                <p>Puntuación: <span id="team1-points">0</span></p>
-                <p>Errores: <span id="team1-errors">0</span></p>
+    <div class="game-board">
+        <!-- Panel de Visualización -->
+        <div class="scoreboard">
+            <div class="team-score">
+                <h2>Puntos Equipo 1</h2>
+                <span id="team1-points">0</span>
+                <div id="team1-errors" class="errors"></div>
             </div>
-            <div class="team">
-                <h2>Equipo 2</h2>
-                <p>Puntuación: <span id="team2-points">0</span></p>
-                <p>Errores: <span id="team2-errors">0</span></p>
+            <div class="team-score">
+                <h2>Puntos Equipo 2</h2>
+                <span id="team2-points">0</span>
+                <div id="team2-errors" class="errors"></div>
             </div>
+        </div>
+        <div class="answers-board">
+            <div class="answer" id="answer1">1. ....................</div>
+            <div class="answer" id="answer2">2. ....................</div>
+            <div class="answer" id="answer3">3. ....................</div>
+            <div class="answer" id="answer4">4. ....................</div>
         </div>
     </div>
+
+    <!-- Panel de Control -->
+    <div class="control-panel">
+        <!-- Botones de Respuestas -->
+        <button class="control-button purple" onclick="showAnswer(1, 'Tacos', 50)">1</button>
+        <button class="control-button purple" onclick="showAnswer(2, 'Quesadillas', 30)">2</button>
+        <button class="control-button purple" onclick="showAnswer(3, 'Enchiladas', 20)">3</button>
+
+        <!-- Botones de Errores -->
+        <button class="control-button red" onclick="addError('team1', 1)">1x</button>
+        <button class="control-button red" onclick="addError('team1', 2)">2x</button>
+        <button class="control-button red" onclick="addError('team1', 3)">3x</button>
+
+        <!-- Botones de Puntos para Equipo 1 -->
+        <button class="control-button yellow" onclick="addPoints('team1', 10)">E1</button>
+        <button class="control-button yellow" onclick="subtractPoints('team1', 10)">-E1</button>
+
+        <!-- Botones de Puntos para Equipo 2 -->
+        <button class="control-button yellow" onclick="addPoints('team2', 10)">E2</button>
+        <button class="control-button yellow" onclick="subtractPoints('team2', 10)">-E2</button>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
