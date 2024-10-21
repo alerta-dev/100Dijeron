@@ -19,13 +19,12 @@ const preguntasRondas = [
   ]
 ];
 
-// Mostrar las respuestas de la ronda actual
+// Mostrar las respuestas de la ronda actual (esconderlas al principio)
 function mostrarRonda() {
-  const respuestas = preguntasRondas[rondaActual];
-  respuestas.forEach((item, index) => {
-    document.getElementById(`respuesta${index + 1}`).textContent = item.respuesta;
-    document.getElementById(`puntos${index + 1}`).textContent = item.puntos;
-  });
+  for (let i = 1; i <= 4; i++) {
+    document.getElementById(`respuesta${i}`).textContent = `${i}.............`;
+    document.getElementById(`puntos${i}`).textContent = '';
+  }
 }
 
 // Cambiar de ronda
@@ -39,7 +38,7 @@ function cambiarRonda(siguiente = true) {
   mostrarRonda();
 }
 
-// Mostrar una respuesta específica
+// Mostrar una respuesta específica al presionar los botones
 function mostrarRespuesta(num) {
   const respuesta = preguntasRondas[rondaActual][num - 1];
   document.getElementById(`respuesta${num}`).textContent = respuesta.respuesta;
@@ -78,10 +77,10 @@ function restarPuntos(equipo) {
 // Resetear el panel
 function resetearPanel() {
   for (let i = 1; i <= 4; i++) {
-    document.getElementById(`respuesta${i}`).textContent = '.............';
+    document.getElementById(`respuesta${i}`).textContent = `${i}.............`;
     document.getElementById(`puntos${i}`).textContent = '';
   }
 }
 
-// Iniciar con la primera ronda
+// Iniciar con la primera ronda (y esconder las respuestas)
 mostrarRonda();
