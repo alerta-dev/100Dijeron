@@ -29,7 +29,7 @@ body {
 }
 
 .panel-puntos div {
-  background-color: #ff1111; /* Morado oscuro */
+  background-color: transparent; /* Morado oscuro */
   border-radius: 15px;
   padding: 20px;
   width: 45%;
@@ -43,7 +43,7 @@ body {
 
 /* Panel de respuestas */
 .panel-respuestas {
-  background-color: #5100c1; /* Morado más profundo */
+  background-color: transparent; /* Morado más profundo */
   border-radius: 15px;
   padding: 25px;
   color: #f0e130; /* Amarillo brillante */
