@@ -7,10 +7,10 @@ let erroresEquipo2 = "";
 // Preguntas por rondas
 const preguntasRondas = [
   [
-    { respuesta: "Respuesta 1 Ronda 1", puntos: 30 },
-    { respuesta: "Respuesta 2 Ronda 1", puntos: 20 },
-    { respuesta: "Respuesta 3 Ronda 1", puntos: 10 },
-    { respuesta: "Respuesta 4 Ronda 1", puntos: 5 }
+    { respuesta: "verga", puntos: 30 },
+    { respuesta: "comida", puntos: 20 },
+    { respuesta: "a ti bb 7w7", puntos: 10 },
+    { respuesta: "makima", puntos: 5 }
   ],
   [
     { respuesta: "Respuesta 1 Ronda 2", puntos: 40 },
